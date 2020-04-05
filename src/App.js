@@ -1,15 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
 import Routes from "./routes";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
+
+import { BrowserRouter as Router } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import store from "./store";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes />
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Navbar />
+        <Routes />
+      </Router>
+    </Provider>
   );
 }
 
