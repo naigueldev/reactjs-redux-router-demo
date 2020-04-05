@@ -1,29 +1,22 @@
-/* eslint-disable react/react-in-jsx-scope */
-import React from 'react';
+import React from "react";
 
-import {
-    Switch,
-    Route,
-} from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import Home from './pages/Home';
+import LoginPage from "./pages/Login";
+import DashboardPage from "./pages/Dashboard";
+import HomePage from "./pages/Home";
+import UserPage from "./pages/User";
 
 export default function MainRoutes() {
-    return (
-        <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
+  return (
+    <Switch>
+      <Route exact path="/" component={HomePage} />
 
-            <Route exact path="/login">
-                <Login />
-            </Route>
+      <Route exact path="/login" component={LoginPage} />
 
-            <Route exact path="/dashboard">
-                <Dashboard />
-            </Route>
-        </Switch>
-    );
+      <Route exact path="/users" component={UserPage} />
+
+      <Route exact path="/dashboard" component={DashboardPage} />
+    </Switch>
+  );
 }

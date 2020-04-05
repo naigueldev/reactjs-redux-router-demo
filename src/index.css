@@ -1,13 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+* {
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #1c8ef9 !important;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body,
+html,
+.App,
+#root,
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+
+body {
+  background: #eee;
+}
+.main-box.no-header {
+  padding-top: 20px;
+}
+.main-box {
+  background: #ffffff;
+  -webkit-box-shadow: 1px 1px 2px 0 #cccccc;
+  -moz-box-shadow: 1px 1px 2px 0 #cccccc;
+  -o-box-shadow: 1px 1px 2px 0 #cccccc;
+  -ms-box-shadow: 1px 1px 2px 0 #cccccc;
+  box-shadow: 1px 1px 2px 0 #cccccc;
+  margin-bottom: 16px;
+  -webikt-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.table a.table-link.danger {
+  color: #e74c3c;
+}
+.label {
+  border-radius: 3px;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+.user-list tbody td .user-subhead {
+  font-size: 0.875em;
+  font-style: italic;
+}
+.user-list tbody td .user-link {
+  display: block;
+  font-size: 1.25em;
+  padding-top: 3px;
+}
+a {
+  color: #3498db;
+  outline: none !important;
+}
+.user-list tbody td > img {
+  position: relative;
+  max-width: 50px;
+  float: left;
+  margin-right: 15px;
+}
+
+.table thead tr th {
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+.table thead tr th {
+  border-bottom: 2px solid #e7ebee;
+}
+.table tbody tr td:first-child {
+  font-size: 1.125em;
+  font-weight: 300;
+}
+.table tbody tr td {
+  border: none;
+}
+.table tbody tr {
+  font-size: 0.875em;
+  vertical-align: middle;
+  border-top: 1px solid #e7ebee;
+  padding: 12px 8px;
+}
+.d-grid {
+  display: grid;
 }

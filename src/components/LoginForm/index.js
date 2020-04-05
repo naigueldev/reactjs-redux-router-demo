@@ -1,37 +1,32 @@
-import React, { Component } from 'react';
-import { Form, Button, Container, Row, Col} from "react-bootstrap";
+import React, { Component } from "react";
+import { Title } from "../../styles";
 
 class Login extends Component {
-    render() {
-        return (
-            <Container>
-            <Row className="justify-content-md-center">
-                <Col xs lg="6">
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                    </Form.Group>
+  render() {
+    return (
+      <form>
+        <Title fontSize={25}>Sign In</Title>
 
-                    <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                    Submit
-                    </Button>
-                </Form>
-                </Col>
-            </Row>
-            </Container>
-        )
-    }
+        <div className="form-group">
+          <label>Email address</label>
+          <input type="email" className="form-control" placeholder="E-mail" />
+        </div>
+
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary btn-block">
+          Entrar
+        </button>
+      </form>
+    );
+  }
 }
 
 export default Login;
